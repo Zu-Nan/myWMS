@@ -1,9 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
-  <Options UIType="TabbedMDI"
-         RestoreTabbedMdiLayout="True"
-         ShowTabImage="True">
-  </Options>
-  <NavigationItems NavigationStyle="Accordion">
-  </NavigationItems>
+  <Localization>
+    <LocalizationGroup Name="Captions">
+      <LocalizationItem Name="DetailView" Value="详情视图" />
+      <LocalizationItem Name="EditCriteria" Value="编辑条件" />
+      <LocalizationItem Name="ListView" Value="列表视图" />
+      <LocalizationItem Name="View" Value="视图" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Confirmations">
+      <LocalizationItem Name="Cancel" Value="未保存的更改将丢失。您想继续吗？" />
+      <LocalizationItem Name="SaveChanges" Value="未保存的更改将丢失。您想在退出前保存更改吗？" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="DialogButtons">
+      <LocalizationItem Name="Abort" Value="&amp;中止" />
+      <LocalizationItem Name="Add" Value="添加" />
+      <LocalizationItem Name="Apply" Value="应用" />
+      <LocalizationItem Name="Back" Value="&lt; 返回" />
+      <LocalizationItem Name="Cancel" Value="&amp;取消" />
+      <LocalizationItem Name="Close" Value="关闭" />
+      <LocalizationItem Name="Delete" Value="删除" />
+      <LocalizationItem Name="Discard" Value="放弃更改" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems NavigationStyle="Accordion" />
+  <Options UIType="TabbedMDI" RestoreTabbedMdiLayout="True" ShowTabImage="True" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="24.2.8.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerBlazorModule" Version="24.2.8.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="24.2.8.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="24.2.8.0" IsNewNode="True" />
+  </SchemaModules>
 </Application>
