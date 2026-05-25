@@ -243,7 +243,29 @@
       </LocalizationGroup>
     </LocalizationGroup>
   </Localization>
-  <NavigationItems NavigationStyle="Accordion" />
+  <NavigationItems NavigationStyle="Accordion">
+    <Items>
+      <Item Id="Default" Caption="基础信息">
+        <Items>
+          <Item Id="ApplicationUser_ListView" Caption="用户" />
+          <Item Id="Event_ListView" Caption="日程安排" />
+          <Item Id="MyDetails" Caption="我的信息" />
+          <Item Id="PermissionPolicyRole_ListView" Caption="身份权限" />
+        </Items>
+      </Item>
+      <Item Id="Reports" Caption="报表">
+        <Items>
+          <Item Id="Dashboards" Caption="仪表盘" />
+          <Item Id="ReportsV2" Caption="报表" />
+        </Items>
+      </Item>
+      <Item Id="State Machine" Caption="状态机">
+        <Items>
+          <Item Id="XpoStateMachine_ListView" Caption="状态机" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
   <Options UIType="TabbedMDI" RestoreTabbedMdiLayout="True" ShowTabImage="True" />
   <SchemaModules>
     <SchemaModule Name="CloneObjectModule" Version="24.2.8.0" IsNewNode="True" />
