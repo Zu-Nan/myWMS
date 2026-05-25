@@ -1,5 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" Caption="取消" />
+      <Action Id="CancelAction" Caption="取消" />
+      <Action Id="ChangePasswordByUser" Caption="修改用户密码" />
+      <Action Id="ChangeStateAction" Caption="修改状态" />
+      <Action Id="ChangeVariant" Caption="个性化布局" ToolTip="切换当前视图表现形式" />
+      <Action Id="CloneObject" Caption="复制...." ShortCaption="" ToolTip="复制对象" />
+      <Action Id="Close" Caption="关闭" />
+      <Action Id="CloseAllTabsAction" Caption="关闭所有标签页" />
+      <Action Id="CloseAllTabsButThisAction" Caption="关闭除此之外所有标签页" />
+      <Action Id="CloseThisTabAction" Caption="关闭当前标签页" />
+      <Action Id="ColumnChooser" Caption="选择显示列" />
+      <Action Id="CopyModelDifference" Caption="复制模型差异" ToolTip="将设置（模型差异）从一个用户复制到另一个用户。请先选择源设置（即要复制的模型差异），点击此按钮，然后在弹出的窗口中选择目标用户。用户在重新启动应用程序后，这些更改就会生效。" />
+      <Action Id="CopyPredefinedReport" Caption="复制预定义报表" />
+      <Action Id="CreateDashboard" Caption="创建仪表盘" />
+      <Action Id="CreateModelDifferences" Caption="创建模型差异" ToolTip="为所有用户初始化设置（模型差异）。" />
+      <Action Id="DashboardExportToXml" Caption="导出为XML" ToolTip="将此仪表盘的内容导出为 XML" />
+      <Action Id="DashboardSwitchToDesigner" Caption="切换到设计模式" ToolTip="在设计器和工作（查看）模式之间进行切换" />
+      <Action Id="DashboardSwitchToViewer" Caption="切换到查看模式" ToolTip="在设计器和工作（查看）模式之间进行切换" />
+      <Action Id="Delete" Caption="删除" ConfirmationMessage="您即将删除选中的记录。是否要继续？" />
+      <Action Id="Delete Item" Caption="删除项" ConfirmationMessage="您即将删除选中的项目。是否要继续？" />
+      <Action Id="DeleteDashboard" Caption="删除仪表盘" />
+      <Action Id="Diagnostic Info" Caption="诊断" />
+      <Action Id="Diagnostic Info.Actions Info" Caption="诊断信息.操作信息" />
+      <Action Id="Diagnostic Info.Rules Info" Caption="诊断信息.规则信息" />
+      <Action Id="Diagnostic Info.View Info" Caption="诊断信息.视图信息" />
+      <Action Id="DialogCancel" Caption="取消" />
+      <Action Id="DialogClose" Caption="关闭" />
+      <Action Id="DialogOK" Caption="确定" />
+      <Action Id="Dismiss" Caption="忽略" />
+      <Action Id="DismissAll" Caption="全部忽略" ConfirmationMessage="您即将关闭/清除所有通知。是否要继续？" />
+      <Action Id="EditReportController.Edit" Caption="编辑" />
+      <Action Id="ExecuteReport" Caption="执行报表" />
+      <Action Id="Export" Caption="导出为" />
+      <Action Id="ExportModelDifferences" Caption="导出模型差异" />
+      <Action Id="FilterEditor" Caption="筛选编辑器" />
+      <Action Id="FullTextSearch" Caption="按文本过滤" NullValuePrompt="输入要查找的内容..." ToolTip="按文本筛选记录" />
+      <Action Id="HideItemsFromDashboard" Caption="不在仪表盘显示" ToolTip="在仪表盘隐藏所选项" />
+      <Action Id="ImportSharedModelDifference" Caption="导入共享模型差异" ConfirmationMessage="您即将使用 {0} 文件的内容覆盖共享设置（模型差异）。此操作无法撤销。是否继续？" ToolTip="从应用程序文件夹中的 {0} 文件导入共享设置（模型差异）。" />
+      <Action Id="Link" Caption="链接" />
+      <Action Id="ListViewShowObject" Caption="打开" />
+      <Action Id="Logoff" Caption="退出登录" />
+      <Action Id="Logon" Caption="登录" />
+      <Action Id="MergeAction" Caption="合并" />
+      <Action Id="MyDetails" Caption="个人资料" />
+      <Action Id="NavigateBack" Caption="后退" ToolTip="返回到上一个界面" />
+      <Action Id="NavigateForward" Caption="前进" ToolTip="前进到下一个页面" />
+      <Action Id="New" Caption="新建" />
+      <Action Id="NextObject" Caption="下一条记录" />
+      <Action Id="OrganizeDashboard" Caption="仪表盘布局" />
+      <Action Id="PreviewReportV2" Caption="预览" />
+      <Action Id="PreviousObject" Caption="上一条记录" />
+      <Action Id="Refresh" Caption="刷新" />
+      <Action Id="RefreshAction" Caption="刷新" />
+      <Action Id="RefreshNotifications" Caption="刷新" />
+      <Action Id="ReportViewerDialogControllerV2_Close" Caption="关闭" />
+      <Action Id="ReportWizard_Close" Caption="关闭" />
+      <Action Id="ReportWizard_Create" Caption="创建" />
+      <Action Id="ResetModelDifferences" Caption="重置模型差异" ConfirmationMessage="您即将重置所选的设置（模型差异）。是否继续？" ToolTip="重置所选的设置（模型差异）。更改将在用户重启应用程序后生效。" />
+      <Action Id="ResetPassword" Caption="重置密码" ToolTip="为选定的用户生成一个新密码" />
+      <Action Id="ResetViewSettings" Caption="重置视图设置" ConfirmationMessage="您即将重置为 &quot;{0}&quot; 视图所做的所有设置。是否继续？" ToolTip="重置为 &quot;{0}&quot; 视图所做的所有设置。" />
+      <Action Id="Save" Caption="保存" />
+      <Action Id="SaveAndClose" Caption="保存并关闭" />
+      <Action Id="SaveAndNew" Caption="保存并新建" />
+      <Action Id="SearchOpenDetailView" Caption="打开" />
+      <Action Id="SetFilter" Caption="筛选" />
+      <Action Id="ShowAllContexts" Caption="验证" ToolTip="在所有展示的上下文中，验证选定的对象。" />
+      <Action Id="ShowInDocument" Caption="在文档中查看" ToolTip="在文档中显示选定的记录" />
+      <Action Id="ShowInReportV2" Caption="在报表中显示" ToolTip="在报表中显示选定的记录" />
+      <Action Id="ShowItemsOnDashboard" Caption="在仪表盘中显示" ToolTip="在仪表板上显示选定的项目" />
+      <Action Id="ShowNavigationItem" Caption="导航栏" />
+      <Action Id="ShowNotificationsAction" Caption="显示通知操作" />
+      <Action Id="ShowReportDesignerV2" Caption="打开报表设计器" />
+      <Action Id="Snooze" Caption="稍后提醒" />
+      <Action Id="SnoozeListAction" Caption="稍后提醒 {0}" />
+      <Action Id="Unlink" Caption="取消链接" ConfirmationMessage="你即将取消所选记录的关联。确定要继续吗？" />
+    </Actions>
+  </ActionDesign>
   <Localization>
     <LocalizationGroup Name="Captions">
       <LocalizationItem Name="DetailView" Value="详情视图" />
@@ -167,4 +246,139 @@
     <SchemaModule Name="SchedulerModuleBase" Version="24.2.8.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="24.2.8.0" IsNewNode="True" />
   </SchemaModules>
+  <Views>
+    <DetailView Id="NewReportWizardParameters_DetailView">
+      <Items>
+        <PropertyEditor Id="DataType" Caption="数据类型" />
+        <PropertyEditor Id="DisplayName" Caption="显示名称" />
+        <PropertyEditor Id="ReportType" Caption="报表类型" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NewReportWizardParameters" Caption="新建报表向导的参数" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="NewReportWizardParameters_ListView">
+      <Columns>
+        <ColumnInfo Id="DisplayName" Caption="显示名称" />
+        <ColumnInfo Id="ReportType" Caption="报表类型" />
+        <ColumnInfo Id="DataType" Caption="数据类型" />
+      </Columns>
+    </ListView>
+    <ListView Id="XpoState_Appearance_ListView">
+      <Columns>
+        <ColumnInfo Id="AppearanceItemType" Caption="外观项目类型" />
+        <ColumnInfo Id="Context" Caption="作用范围" />
+        <ColumnInfo Id="TargetItems" Caption="目标项" />
+        <ColumnInfo Id="Priority" Caption="优先级" />
+        <ColumnInfo Id="FontColor" Caption="字体颜色" />
+        <ColumnInfo Id="BackColor" Caption="背景颜色" />
+        <ColumnInfo Id="FontStyle" Caption="字体样式" />
+        <ColumnInfo Id="Enabled" Caption="启用" />
+        <ColumnInfo Id="Visibility" Caption="可见性" />
+      </Columns>
+    </ListView>
+    <DetailView Id="XpoState_DetailView" Caption="状态">
+      <Items>
+        <PropertyEditor Id="Appearance" Caption="外观" />
+        <PropertyEditor Id="Caption" Caption="标题" />
+        <PropertyEditor Id="Marker" Caption="状态标记" />
+        <PropertyEditor Id="TargetObjectCriteria" Caption="目标对象筛选条件" />
+        <PropertyEditor Id="Transitions" Caption="状态转换" />
+      </Items>
+    </DetailView>
+    <ListView Id="XpoState_ListView">
+      <Columns>
+        <ColumnInfo Id="TargetObjectCriteria" Caption="目标对象筛选条件" />
+        <ColumnInfo Id="Caption" Caption="标题" />
+        <ColumnInfo Id="StateMachine" Caption="状态机" />
+        <ColumnInfo Id="Marker" Caption="状态标记" />
+      </Columns>
+    </ListView>
+    <ListView Id="XpoState_LookupListView" Caption="状态" />
+    <ListView Id="XpoState_Transitions_ListView">
+      <Columns>
+        <ColumnInfo Id="SourceState" Caption="源状态" />
+        <ColumnInfo Id="Caption" Caption="标题" />
+        <ColumnInfo Id="TargetState" Caption="目标状态" />
+        <ColumnInfo Id="Index" Caption="顺序" />
+        <ColumnInfo Id="SaveAndCloseView" Caption="保存并关闭视图" />
+      </Columns>
+    </ListView>
+    <DetailView Id="XpoStateAppearance_DetailView">
+      <Items>
+        <PropertyEditor Id="AppearanceItemType" Caption="外观项目类型" />
+        <PropertyEditor Id="BackColor" Caption="背景颜色" />
+        <PropertyEditor Id="Context" Caption="作用范围" />
+        <PropertyEditor Id="Enabled" Caption="启用" />
+        <PropertyEditor Id="FontColor" Caption="字体颜色" />
+        <PropertyEditor Id="FontStyle" Caption="字体样式" />
+        <PropertyEditor Id="Priority" Caption="优先级" />
+        <PropertyEditor Id="TargetItems" Caption="目标项" />
+        <PropertyEditor Id="Visibility" Caption="可见性" />
+      </Items>
+    </DetailView>
+    <ListView Id="XpoStateAppearance_ListView">
+      <Columns>
+        <ColumnInfo Id="AppearanceItemType" Caption="外观项目类型" />
+        <ColumnInfo Id="Context" Caption="作用范围" />
+        <ColumnInfo Id="TargetItems" Caption="目标项" />
+        <ColumnInfo Id="Priority" Caption="优先级" />
+        <ColumnInfo Id="FontColor" Caption="字体颜色" />
+        <ColumnInfo Id="BackColor" Caption="背景颜色" />
+        <ColumnInfo Id="FontStyle" Caption="字体样式" />
+        <ColumnInfo Id="Enabled" Caption="启用" />
+        <ColumnInfo Id="Visibility" Caption="可见性" />
+      </Columns>
+    </ListView>
+    <DetailView Id="XpoStateMachine_DetailView">
+      <Items>
+        <PropertyEditor Id="Active" Caption="激活" />
+        <PropertyEditor Id="ExpandActionsInDetailView" Caption="在详细视图中展开操作" />
+        <PropertyEditor Id="Name" Caption="名称" />
+        <PropertyEditor Id="StartState" Caption="初始状态" />
+        <PropertyEditor Id="StatePropertyName" Caption="状态属性名" />
+        <PropertyEditor Id="States" Caption="状态" />
+        <PropertyEditor Id="TargetObjectType" Caption="目标对象类型" />
+      </Items>
+    </DetailView>
+    <ListView Id="XpoStateMachine_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="名称" />
+        <ColumnInfo Id="Active" Caption="激活" />
+        <ColumnInfo Id="TargetObjectType" Caption="目标对象类型" />
+        <ColumnInfo Id="StatePropertyName" Caption="状态属性名" />
+        <ColumnInfo Id="StartState" Caption="初始状态" />
+        <ColumnInfo Id="ExpandActionsInDetailView" Caption="在详细视图中展开操作" />
+      </Columns>
+    </ListView>
+    <ListView Id="XpoStateMachine_States_ListView">
+      <Columns>
+        <ColumnInfo Id="StateMachine" Caption="状态机" />
+        <ColumnInfo Id="TargetObjectCriteria" Caption="目标对象条件" />
+        <ColumnInfo Id="Caption" Caption="标题" />
+        <ColumnInfo Id="Marker" Caption="状态标记" />
+      </Columns>
+    </ListView>
+    <DetailView Id="XpoTransition_DetailView">
+      <Items>
+        <PropertyEditor Id="Caption" Caption="标题" />
+        <PropertyEditor Id="Index" Caption="顺序" />
+        <PropertyEditor Id="SaveAndCloseView" Caption="保存并关闭视图" />
+        <PropertyEditor Id="TargetState" Caption="目标状态" />
+      </Items>
+    </DetailView>
+    <ListView Id="XpoTransition_ListView">
+      <Columns>
+        <ColumnInfo Id="Caption" Caption="标题" />
+        <ColumnInfo Id="SourceState" Caption="源状态" />
+        <ColumnInfo Id="TargetState" Caption="目标状态" />
+        <ColumnInfo Id="Index" Caption="顺序" />
+        <ColumnInfo Id="SaveAndCloseView" Caption="保存并关闭视图" />
+      </Columns>
+    </ListView>
+  </Views>
 </Application>
