@@ -400,7 +400,14 @@
         <PropertyEditor Id="Subject" Caption="标题" />
       </Items>
     </DetailView>
-    <DetailView Id="NewReportWizardParameters_DetailView">
+    <ListView Id="Event_ListView" Caption="日程安排" />
+    <ListView Id="Event_Resources_ListView" Caption="重复">
+      <Columns>
+        <ColumnInfo Id="Caption" Caption="标题" />
+        <ColumnInfo Id="Color" Caption="颜色" />
+      </Columns>
+    </ListView>
+    <DetailView Id="NewReportWizardParameters_DetailView" Caption="新建报表向导参数">
       <Items>
         <PropertyEditor Id="DataType" Caption="数据类型" />
         <PropertyEditor Id="DisplayName" Caption="显示名称" />
@@ -414,7 +421,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="NewReportWizardParameters_ListView">
+    <ListView Id="NewReportWizardParameters_ListView" Caption="新建报表向导参数">
       <Columns>
         <ColumnInfo Id="DisplayName" Caption="显示名称" />
         <ColumnInfo Id="ReportType" Caption="报表类型" />
@@ -489,6 +496,24 @@
         <ColumnInfo Id="Name" Caption="名称" />
         <ColumnInfo Id="IsAdministrative" Caption="是否为管理员" />
         <ColumnInfo Id="CanEditModel" Caption="允许编辑模型" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ReportDataV2_DetailView" Caption="报表">
+      <Items>
+        <PropertyEditor Id="DataTypeCaption" Caption="数据类型" />
+        <PropertyEditor Id="DisplayName" Caption="显示名称" />
+        <PropertyEditor Id="IsInplaceReport" Caption="是否为就地报表" />
+        <PropertyEditor Id="IsPredefined" Caption="是否为预定义的" />
+        <PropertyEditor Id="ParametersObjectType" Caption="参数对象类型" />
+      </Items>
+    </DetailView>
+    <ListView Id="ReportDataV2_ListView" Caption="报表">
+      <Columns>
+        <ColumnInfo Id="IsInplaceReport" Caption="是否为就地报表" />
+        <ColumnInfo Id="IsPredefined" Caption="是否为预定义的" />
+        <ColumnInfo Id="ParametersObjectType" Caption="参数对象类型" />
+        <ColumnInfo Id="DisplayName" Caption="显示名称" />
+        <ColumnInfo Id="DataTypeCaption" Caption="数据类型" />
       </Columns>
     </ListView>
     <DetailView Id="Resource_DetailView" Caption="重复">
