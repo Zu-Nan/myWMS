@@ -311,6 +311,14 @@
         <LocalizationItem Name="Customize" Value="自定义" />
         <LocalizationItem Name="SearchPrompt" Value="输入要搜索的文本..." />
       </LocalizationGroup>
+      <LocalizationGroup Name="SchedulerRecurrenceInfoPropertyEditor">
+        <LocalizationItem Name="DoesNotRepeat" Value="不重复" />
+        <LocalizationItem Name="OccursPrefix" Value="发生频率" />
+        <LocalizationItem Name="RepeatsDaily" Value="每天重复" />
+        <LocalizationItem Name="RepeatsMonthly" Value="每月重复" />
+        <LocalizationItem Name="RepeatsWeekly" Value="每周重复" />
+        <LocalizationItem Name="RepeatsYearly" Value="每年重复" />
+      </LocalizationGroup>
     </LocalizationGroup>
   </Localization>
   <NavigationItems NavigationStyle="Accordion">
@@ -352,7 +360,7 @@
         <PropertyEditor Id="UserName" Caption="用户名" />
       </Items>
     </DetailView>
-    <ListView Id="ApplicationUser_ListView">
+    <ListView Id="ApplicationUser_ListView" Caption="用户">
       <Columns>
         <ColumnInfo Id="UserName" Caption="用户名" />
         <ColumnInfo Id="ChangePasswordOnFirstLogon" Caption="强制修改密码" ToolTip="用户必须在下次登录时更改密码" />
@@ -364,6 +372,32 @@
         <StaticText Id="LogonText" Text="请在下方输入您的用户名和密码。" />
         <PropertyEditor Id="Password" Caption="密码" />
         <PropertyEditor Id="UserName" Caption="用户名" />
+      </Items>
+    </DetailView>
+    <DetailView Id="DashboardData_DetailView" Caption="仪表盘数据" />
+    <ListView Id="DashboardData_ListView" Caption="仪表盘">
+      <Columns>
+        <ColumnInfo Id="Title" Caption="标题" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DashboardViewer_DetailView" Caption="仪表盘视图" />
+    <DetailView Id="Event_DetailView" Caption="日程安排">
+      <Items>
+        <PropertyEditor Id="AlarmTime" Caption="提醒时间" />
+        <PropertyEditor Id="AllDay" Caption="全天" />
+        <PropertyEditor Id="Description" Caption="描述" />
+        <PropertyEditor Id="EndOn" Caption="结束" />
+        <PropertyEditor Id="IsPostponed" Caption="已延期" />
+        <PropertyEditor Id="Label" Caption="标签" />
+        <PropertyEditor Id="Location" Caption="位置" />
+        <PropertyEditor Id="NotificationMessage" Caption="通知内容" />
+        <PropertyEditor Id="RecurrenceInfoXml" Caption="重复" />
+        <PropertyEditor Id="RecurrencePattern" Caption="循环模式" />
+        <PropertyEditor Id="ReminderTime" Caption="备忘录" />
+        <PropertyEditor Id="Resources" Caption="重复" />
+        <PropertyEditor Id="StartOn" Caption="开始" />
+        <PropertyEditor Id="Status" Caption="状态" />
+        <PropertyEditor Id="Subject" Caption="标题" />
       </Items>
     </DetailView>
     <DetailView Id="NewReportWizardParameters_DetailView">
@@ -455,6 +489,19 @@
         <ColumnInfo Id="Name" Caption="名称" />
         <ColumnInfo Id="IsAdministrative" Caption="是否为管理员" />
         <ColumnInfo Id="CanEditModel" Caption="允许编辑模型" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Resource_DetailView" Caption="重复">
+      <Items>
+        <PropertyEditor Id="Caption" Caption="标题" />
+        <PropertyEditor Id="Color" Caption="颜色" />
+        <PropertyEditor Id="Events" Caption="日程" />
+      </Items>
+    </DetailView>
+    <ListView Id="Resource_ListView" Caption="重复">
+      <Columns>
+        <ColumnInfo Id="Caption" Caption="标题" />
+        <ColumnInfo Id="Color" Caption="颜色" />
       </Columns>
     </ListView>
     <ListView Id="XpoState_Appearance_ListView">
