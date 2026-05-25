@@ -323,7 +323,7 @@
   </Localization>
   <NavigationItems NavigationStyle="Accordion">
     <Items>
-      <Item Id="Default" Caption="基础信息">
+      <Item Id="Default" Caption="系统管理" Index="0">
         <Items>
           <Item Id="ApplicationUser_ListView" Caption="用户" />
           <Item Id="Event_ListView" Caption="日程安排" />
@@ -331,17 +331,25 @@
           <Item Id="PermissionPolicyRole_ListView" Caption="身份权限" />
         </Items>
       </Item>
-      <Item Id="Reports" Caption="报表">
+      <Item Id="基础数据" Index="1">
+        <Items>
+          <Item Id="CangKu_ListView" Caption="仓库管理" />
+        </Items>
+      </Item>
+      <Item Id="在库管理" Index="2" />
+      <Item Id="作业管理" Index="3" />
+      <Item Id="Reports" Caption="报表" Index="97">
         <Items>
           <Item Id="Dashboards" Caption="仪表盘" />
           <Item Id="ReportsV2" Caption="报表" />
         </Items>
       </Item>
-      <Item Id="State Machine" Caption="状态机">
+      <Item Id="State Machine" Caption="状态机" Index="98">
         <Items>
           <Item Id="XpoStateMachine_ListView" Caption="状态机" />
         </Items>
       </Item>
+      <Item Id="统计查询" Index="99" />
     </Items>
   </NavigationItems>
   <Options UIType="TabbedMDI" RestoreTabbedMdiLayout="True" ShowTabImage="True" />
