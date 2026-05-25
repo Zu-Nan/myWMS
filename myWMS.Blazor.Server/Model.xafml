@@ -387,6 +387,31 @@
         <ColumnInfo Id="DataType" Caption="数据类型" />
       </Columns>
     </ListView>
+    <ListView Id="PermissionPolicyActionPermissionObject_ListView">
+      <Columns>
+        <ColumnInfo Id="ActionId" Caption="行为ID" />
+        <ColumnInfo Id="Role" Caption="角色" />
+        <ColumnInfo Id="ActionDescriptor" Caption="行为" />
+        <ColumnInfo Id="Category" Caption="分类" />
+        <ColumnInfo Id="Image" Caption="图片" />
+      </Columns>
+    </ListView>
+    <ListView Id="PermissionPolicyNavigationPermissionObject_ListView">
+      <Columns>
+        <ColumnInfo Id="Role" Caption="角色" />
+        <ColumnInfo Id="ItemPath" Caption="导航菜单项" />
+        <ColumnInfo Id="NavigateState" Caption="导航" />
+      </Columns>
+    </ListView>
+    <ListView Id="PermissionPolicyObjectPermissionsObject_ListView">
+      <Columns>
+        <ColumnInfo Id="TypePermissionObject" Caption="类型权限对象" />
+        <ColumnInfo Id="Criteria" Caption="筛选条件" />
+        <ColumnInfo Id="ReadState" Caption="读" />
+        <ColumnInfo Id="WriteState" Caption="写" />
+        <ColumnInfo Id="DeleteState" Caption="删除" />
+      </Columns>
+    </ListView>
     <DetailView Id="PermissionPolicyRole_DetailView">
       <Items>
         <PropertyEditor Id="ActionPermissions" Caption="被禁止的操作" />
@@ -405,6 +430,23 @@
         <ColumnInfo Id="Name" Caption="名称" />
         <ColumnInfo Id="IsAdministrative" Caption="是否为管理员" />
         <ColumnInfo Id="CanEditModel" Caption="允许更改模型" />
+      </Columns>
+    </ListView>
+    <ListView Id="PermissionPolicyTypePermissionObject_ListView">
+      <Columns>
+        <ColumnInfo Id="Role" Caption="角色" />
+        <ColumnInfo Id="TargetType" Caption="目标类型" />
+        <ColumnInfo Id="ReadState" Caption="读" />
+        <ColumnInfo Id="WriteState" Caption="写" />
+        <ColumnInfo Id="CreateState" Caption="创建" />
+        <ColumnInfo Id="DeleteState" Caption="删除" />
+      </Columns>
+    </ListView>
+    <ListView Id="PermissionPolicyUser_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="用户名" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Caption="强制修改密码" />
+        <ColumnInfo Id="IsActive" Caption="是否激活" />
       </Columns>
     </ListView>
     <ListView Id="PermissionPolicyUser_Roles_ListView">
