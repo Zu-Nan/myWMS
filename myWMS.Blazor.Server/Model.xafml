@@ -237,6 +237,11 @@
         <LocalizationItem Name="ActionMethodShouldBeNonGeneric" Value="Unable to create action for method {0} of class {1}. Action method should be non-generic." />
       </LocalizationGroup>
     </LocalizationGroup>
+    <LocalizationGroup Name="Security">
+      <LocalizationGroup Name="Account">
+        <LocalizationItem Name="UserName" Value="用户名" />
+      </LocalizationGroup>
+    </LocalizationGroup>
   </Localization>
   <NavigationItems NavigationStyle="Accordion" />
   <Options UIType="TabbedMDI" RestoreTabbedMdiLayout="True" ShowTabImage="True" />
@@ -247,6 +252,13 @@
     <SchemaModule Name="SystemModule" Version="24.2.8.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_Blazor_DetailView" Caption="WMS">
+      <Items>
+        <StaticText Id="LogonText" Text="请在下方输入您的用户名和密码。" />
+        <PropertyEditor Id="Password" Caption="密码" />
+        <PropertyEditor Id="UserName" Caption="用户名" />
+      </Items>
+    </DetailView>
     <DetailView Id="NewReportWizardParameters_DetailView">
       <Items>
         <PropertyEditor Id="DataType" Caption="数据类型" />
