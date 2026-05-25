@@ -237,9 +237,79 @@
         <LocalizationItem Name="ActionMethodShouldBeNonGeneric" Value="Unable to create action for method {0} of class {1}. Action method should be non-generic." />
       </LocalizationGroup>
     </LocalizationGroup>
+    <LocalizationGroup Name="NotificationsPostponeTimesList">
+      <LocalizationItem Name="AtStartTime" Value="0 分钟" />
+      <LocalizationItem Name="EightHours" Value="8 小时" />
+      <LocalizationItem Name="ElevenHours" Value="11 小时" />
+      <LocalizationItem Name="FifteenMinutes" Value="15 分钟" />
+      <LocalizationItem Name="FiveHours" Value="5 小时" />
+      <LocalizationItem Name="FiveMinutes" Value="5 分钟" />
+      <LocalizationItem Name="FourDays" Value="4 天" />
+      <LocalizationItem Name="FourHours" Value="4 小时" />
+      <LocalizationItem Name="HalfDay" Value="0,5 天" />
+      <LocalizationItem Name="NineHours" Value="9 小时" />
+      <LocalizationItem Name="OneDay" Value="1 天" />
+      <LocalizationItem Name="OneHour" Value="1 小时" />
+      <LocalizationItem Name="OneWeek" Value="1 周" />
+      <LocalizationItem Name="SevenHours" Value="7 小时" />
+      <LocalizationItem Name="SixHours" Value="6 小时" />
+      <LocalizationItem Name="TenHours" Value="10 小时" />
+      <LocalizationItem Name="TenMinutes" Value="10 分钟" />
+      <LocalizationItem Name="ThirtyMinutes" Value="30 分钟" />
+      <LocalizationItem Name="ThreeDays" Value="3 天" />
+      <LocalizationItem Name="ThreeHours" Value="3 天" />
+      <LocalizationItem Name="TwoDays" Value="2 天" />
+      <LocalizationItem Name="TwoHours" Value="2 天" />
+      <LocalizationItem Name="TwoWeeks" Value="2 周" />
+    </LocalizationGroup>
     <LocalizationGroup Name="Security">
       <LocalizationGroup Name="Account">
         <LocalizationItem Name="UserName" Value="用户名" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="VisualComponents">
+      <LocalizationGroup Name="GridContextMenu">
+        <LocalizationItem Name="MenuColumnAutoFilterRowHide" Value="隐藏自动筛选行" />
+        <LocalizationItem Name="MenuColumnAutoFilterRowShow" Value="显示自动筛选行" />
+        <LocalizationItem Name="MenuColumnChooser" Value="选择显示列" />
+        <LocalizationItem Name="MenuColumnClearFilter" Value="清除筛选条件" />
+        <LocalizationItem Name="MenuColumnClearSorting" Value="清除排序" />
+        <LocalizationItem Name="MenuColumnFilterEditor" Value="编辑筛选条件..." />
+        <LocalizationItem Name="MenuColumnFindFilterHide" Value="隐藏查找面板" />
+        <LocalizationItem Name="MenuColumnFindFilterShow" Value="显示查找面板" />
+        <LocalizationItem Name="MenuColumnGroup" Value="按此列分组" />
+        <LocalizationItem Name="MenuColumnRemoveColumn" Value="隐藏此列" />
+        <LocalizationItem Name="MenuColumnSortAscending" Value="升序排列" />
+        <LocalizationItem Name="MenuColumnSortDescending" Value="降序排列" />
+        <LocalizationItem Name="MenuColumnUngroup" Value="取消分组" />
+        <LocalizationItem Name="MenuFooterHide" Value="隐藏页脚" />
+        <LocalizationItem Name="MenuFooterShow" Value="显示页脚" />
+        <LocalizationItem Name="MenuGroupPanelClearGrouping" Value="清除分组" />
+        <LocalizationItem Name="MenuGroupPanelFullCollapse" Value="全部折叠" />
+        <LocalizationItem Name="MenuGroupPanelFullExpand" Value="全部展开" />
+        <LocalizationItem Name="MenuGroupPanelHide" Value="隐藏分组框" />
+        <LocalizationItem Name="MenuGroupPanelShow" Value="隐藏分组框" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Header">
+        <LocalizationItem Name="HideNavigationPane" Value="隐藏导航栏" />
+        <LocalizationItem Name="Settings" Value="设置" />
+        <LocalizationItem Name="ShowNavigationPane" Value="显示导航栏" />
+        <LocalizationItem Name="SkipToMainContent" Value="跳至主要内容" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="ImageEdit">
+        <LocalizationItem Name="AddImage" Value="添加图片" />
+        <LocalizationItem Name="Cancel" Value="取消" />
+        <LocalizationItem Name="Change" Value="更改" />
+        <LocalizationItem Name="ChangeImage" Value="更换图片" />
+        <LocalizationItem Name="Remove" Value="移除" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="LoadingIndicator">
+        <LocalizationItem Name="Loading" Value="加载中..." />
+      </LocalizationGroup>
+      <LocalizationGroup Name="ObjectModel">
+        <LocalizationItem Name="Caption" Value="对象模型" />
+        <LocalizationItem Name="Customize" Value="自定义" />
+        <LocalizationItem Name="SearchPrompt" Value="输入要搜索的文本..." />
       </LocalizationGroup>
     </LocalizationGroup>
   </Localization>
