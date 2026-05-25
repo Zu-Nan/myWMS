@@ -344,6 +344,21 @@
     <SchemaModule Name="SystemModule" Version="24.2.8.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
+    <DetailView Id="ApplicationUser_DetailView">
+      <Items>
+        <PropertyEditor Id="ChangePasswordOnFirstLogon" Caption="强制修改密码" ToolTip="用户必须在下次登录时更改密码" />
+        <PropertyEditor Id="IsActive" Caption="是否激活" />
+        <PropertyEditor Id="Roles" Caption="角色" />
+        <PropertyEditor Id="UserName" Caption="用户名" />
+      </Items>
+    </DetailView>
+    <ListView Id="ApplicationUser_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="用户名" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Caption="强制修改密码" ToolTip="用户必须在下次登录时更改密码" />
+        <ColumnInfo Id="IsActive" Caption="是否激活" />
+      </Columns>
+    </ListView>
     <DetailView Id="AuthenticationStandardLogonParameters_Blazor_DetailView" Caption="WMS">
       <Items>
         <StaticText Id="LogonText" Text="请在下方输入您的用户名和密码。" />
@@ -370,6 +385,34 @@
         <ColumnInfo Id="DisplayName" Caption="显示名称" />
         <ColumnInfo Id="ReportType" Caption="报表类型" />
         <ColumnInfo Id="DataType" Caption="数据类型" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PermissionPolicyRole_DetailView">
+      <Items>
+        <PropertyEditor Id="ActionPermissions" Caption="被禁止的操作" />
+        <PropertyEditor Id="CanEditModel" Caption="允许编辑模型" />
+        <PropertyEditor Id="IsAdministrative" Caption="是否为管理员" />
+        <PropertyEditor Id="Name" Caption="名称" />
+        <PropertyEditor Id="NavigationPermissions" Caption="导航权限" />
+        <PropertyEditor Id="PermissionPolicy" Caption="权限策略" />
+        <PropertyEditor Id="TypePermissions" Caption="类型权限" />
+        <PropertyEditor Id="Users" Caption="用户" />
+      </Items>
+    </DetailView>
+    <ListView Id="PermissionPolicyRole_ListView">
+      <Columns>
+        <ColumnInfo Id="PermissionPolicy" Caption="权限策略" />
+        <ColumnInfo Id="Name" Caption="名称" />
+        <ColumnInfo Id="IsAdministrative" Caption="是否为管理员" />
+        <ColumnInfo Id="CanEditModel" Caption="允许更改模型" />
+      </Columns>
+    </ListView>
+    <ListView Id="PermissionPolicyUser_Roles_ListView">
+      <Columns>
+        <ColumnInfo Id="PermissionPolicy" Caption="权限策略" />
+        <ColumnInfo Id="Name" Caption="名称" />
+        <ColumnInfo Id="IsAdministrative" Caption="是否为管理员" />
+        <ColumnInfo Id="CanEditModel" Caption="允许编辑模型" />
       </Columns>
     </ListView>
     <ListView Id="XpoState_Appearance_ListView">
