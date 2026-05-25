@@ -473,6 +473,38 @@
         <ColumnInfo Id="CanEditModel" Caption="允许更改模型" />
       </Columns>
     </ListView>
+    <ListView Id="PermissionPolicyRole_Users_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="用户名" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Caption="强制修改密码" />
+        <ColumnInfo Id="IsActive" Caption="是否激活" />
+      </Columns>
+    </ListView>
+    <ListView Id="PermissionPolicyRoleBase_ActionPermissions_ListView">
+      <Columns>
+        <ColumnInfo Id="ActionId" Caption="行为ID" />
+        <ColumnInfo Id="Role" Caption="角色" />
+        <ColumnInfo Id="ActionDescriptor" Caption="行为" />
+        <ColumnInfo Id="Category" Caption="分类" />
+        <ColumnInfo Id="Image" Caption="图片" />
+      </Columns>
+    </ListView>
+    <ListView Id="PermissionPolicyRoleBase_NavigationPermissions_ListView">
+      <Columns>
+        <ColumnInfo Id="ItemPath" Caption="导航菜单项" />
+        <ColumnInfo Id="NavigateState" Caption="导航" />
+      </Columns>
+    </ListView>
+    <ListView Id="PermissionPolicyRoleBase_TypePermissions_ListView">
+      <Columns>
+        <ColumnInfo Id="Role" Caption="角色" />
+        <ColumnInfo Id="TargetType" Caption="目标类型" />
+        <ColumnInfo Id="ReadState" Caption="读" />
+        <ColumnInfo Id="WriteState" Caption="写" />
+        <ColumnInfo Id="CreateState" Caption="创建" />
+        <ColumnInfo Id="DeleteState" Caption="删除" />
+      </Columns>
+    </ListView>
     <ListView Id="PermissionPolicyTypePermissionObject_ListView">
       <Columns>
         <ColumnInfo Id="Role" Caption="角色" />
@@ -516,6 +548,8 @@
         <ColumnInfo Id="DataTypeCaption" Caption="数据类型" />
       </Columns>
     </ListView>
+    <DetailView Id="ReportDesigner_DetailView" Caption="报表" />
+    <DetailView Id="ReportViewer_DetailView" Caption="报表" />
     <DetailView Id="Resource_DetailView" Caption="重复">
       <Items>
         <PropertyEditor Id="Caption" Caption="标题" />
@@ -529,7 +563,7 @@
         <ColumnInfo Id="Color" Caption="颜色" />
       </Columns>
     </ListView>
-    <ListView Id="XpoState_Appearance_ListView">
+    <ListView Id="XpoState_Appearance_ListView" Caption="外观">
       <Columns>
         <ColumnInfo Id="AppearanceItemType" Caption="外观项目类型" />
         <ColumnInfo Id="Context" Caption="作用范围" />
@@ -551,7 +585,7 @@
         <PropertyEditor Id="Transitions" Caption="状态转换" />
       </Items>
     </DetailView>
-    <ListView Id="XpoState_ListView">
+    <ListView Id="XpoState_ListView" Caption="状态">
       <Columns>
         <ColumnInfo Id="TargetObjectCriteria" Caption="目标对象筛选条件" />
         <ColumnInfo Id="Caption" Caption="标题" />
@@ -560,7 +594,7 @@
       </Columns>
     </ListView>
     <ListView Id="XpoState_LookupListView" Caption="状态" />
-    <ListView Id="XpoState_Transitions_ListView">
+    <ListView Id="XpoState_Transitions_ListView" Caption="状态转换">
       <Columns>
         <ColumnInfo Id="SourceState" Caption="源状态" />
         <ColumnInfo Id="Caption" Caption="标题" />
@@ -569,7 +603,7 @@
         <ColumnInfo Id="SaveAndCloseView" Caption="保存并关闭视图" />
       </Columns>
     </ListView>
-    <DetailView Id="XpoStateAppearance_DetailView">
+    <DetailView Id="XpoStateAppearance_DetailView" Caption="外观">
       <Items>
         <PropertyEditor Id="AppearanceItemType" Caption="外观项目类型" />
         <PropertyEditor Id="BackColor" Caption="背景颜色" />
@@ -582,7 +616,7 @@
         <PropertyEditor Id="Visibility" Caption="可见性" />
       </Items>
     </DetailView>
-    <ListView Id="XpoStateAppearance_ListView">
+    <ListView Id="XpoStateAppearance_ListView" Caption="外观">
       <Columns>
         <ColumnInfo Id="AppearanceItemType" Caption="外观项目类型" />
         <ColumnInfo Id="Context" Caption="作用范围" />
@@ -595,7 +629,7 @@
         <ColumnInfo Id="Visibility" Caption="可见性" />
       </Columns>
     </ListView>
-    <DetailView Id="XpoStateMachine_DetailView">
+    <DetailView Id="XpoStateMachine_DetailView" Caption="状态机">
       <Items>
         <PropertyEditor Id="Active" Caption="激活" />
         <PropertyEditor Id="ExpandActionsInDetailView" Caption="在详细视图中展开操作" />
@@ -605,8 +639,13 @@
         <PropertyEditor Id="States" Caption="状态" />
         <PropertyEditor Id="TargetObjectType" Caption="目标对象类型" />
       </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="States_Group" Caption="状态" />
+        </LayoutGroup>
+      </Layout>
     </DetailView>
-    <ListView Id="XpoStateMachine_ListView">
+    <ListView Id="XpoStateMachine_ListView" Caption="状态机">
       <Columns>
         <ColumnInfo Id="Name" Caption="名称" />
         <ColumnInfo Id="Active" Caption="激活" />
@@ -616,7 +655,7 @@
         <ColumnInfo Id="ExpandActionsInDetailView" Caption="在详细视图中展开操作" />
       </Columns>
     </ListView>
-    <ListView Id="XpoStateMachine_States_ListView">
+    <ListView Id="XpoStateMachine_States_ListView" Caption="状态">
       <Columns>
         <ColumnInfo Id="StateMachine" Caption="状态机" />
         <ColumnInfo Id="TargetObjectCriteria" Caption="目标对象条件" />
@@ -624,7 +663,7 @@
         <ColumnInfo Id="Marker" Caption="状态标记" />
       </Columns>
     </ListView>
-    <DetailView Id="XpoTransition_DetailView">
+    <DetailView Id="XpoTransition_DetailView" Caption="状态转换">
       <Items>
         <PropertyEditor Id="Caption" Caption="标题" />
         <PropertyEditor Id="Index" Caption="顺序" />
@@ -632,7 +671,7 @@
         <PropertyEditor Id="TargetState" Caption="目标状态" />
       </Items>
     </DetailView>
-    <ListView Id="XpoTransition_ListView">
+    <ListView Id="XpoTransition_ListView" Caption="状态转换">
       <Columns>
         <ColumnInfo Id="Caption" Caption="标题" />
         <ColumnInfo Id="SourceState" Caption="源状态" />
