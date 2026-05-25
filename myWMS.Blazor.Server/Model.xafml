@@ -11,6 +11,11 @@
       <LocalizationItem Name="Cancel" Value="未保存的更改将丢失。您想继续吗？" />
       <LocalizationItem Name="SaveChanges" Value="未保存的更改将丢失。您想在退出前保存更改吗？" />
     </LocalizationGroup>
+    <LocalizationGroup Name="DashboardOrganizationItems">
+      <LocalizationItem Name="ActionContainer" Value="操作容器" />
+      <LocalizationItem Name="StaticImage" Value="图片" />
+      <LocalizationItem Name="StaticText" Value="文本" />
+    </LocalizationGroup>
     <LocalizationGroup Name="DialogButtons">
       <LocalizationItem Name="Abort" Value="&amp;中止" />
       <LocalizationItem Name="Add" Value="添加" />
@@ -20,6 +25,138 @@
       <LocalizationItem Name="Close" Value="关闭" />
       <LocalizationItem Name="Delete" Value="删除" />
       <LocalizationItem Name="Discard" Value="放弃更改" />
+      <LocalizationItem Name="Edit" Value="编辑" />
+      <LocalizationItem Name="Find" Value="查找" />
+      <LocalizationItem Name="Ignore" Value="&amp;忽略" />
+      <LocalizationItem Name="Next" Value="下一页&gt;" />
+      <LocalizationItem Name="No" Value="否" />
+      <LocalizationItem Name="OK" Value="&amp;是" />
+      <LocalizationItem Name="Remove" Value="移除" />
+      <LocalizationItem Name="Retry" Value="&amp;重试" />
+      <LocalizationItem Name="Save" Value="保存" />
+      <LocalizationItem Name="SaveChanges" Value="保存更改" />
+      <LocalizationItem Name="Yes" Value="是" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="DevExpress.Data.Filtering.Aggregate">
+        <LocalizationItem Name="Avg" Value="平均值" />
+        <LocalizationItem Name="Count" Value="数量" />
+        <LocalizationItem Name="Custom" Value="自定义" />
+        <LocalizationItem Name="Exists" Value="已存在" />
+        <LocalizationItem Name="Max" Value="最大值" />
+        <LocalizationItem Name="Min" Value="最小值" />
+        <LocalizationItem Name="Single" Value="单一" />
+        <LocalizationItem Name="Sum" Value="总和" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Drawing.DXFontStyle">
+        <LocalizationItem Name="Bold" Value="加粗" />
+        <LocalizationItem Name="Italic" Value="斜体" />
+        <LocalizationItem Name="Regular" Value="标准" />
+        <LocalizationItem Name="Strikeout" Value="删除线" />
+        <LocalizationItem Name="Underline" Value="下划线" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Editors.ViewItemVisibility">
+        <LocalizationItem Name="Hide" Value="隐藏" />
+        <LocalizationItem Name="Show" Value="显示" />
+        <LocalizationItem Name="ShowEmptySpace" Value="显示空白区域" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.ModelDifferenceCopyBehavior">
+        <LocalizationItem Name="Merge" Value="合并" />
+        <LocalizationItem Name="Overwrite" Value="覆盖" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Notifications.NotificationItemState">
+        <LocalizationItem Name="Active" Value="激活" />
+        <LocalizationItem Name="Postponed" Value="推迟" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Notifications.NotificationsType">
+        <LocalizationItem Name="Active" Value="启用" />
+        <LocalizationItem Name="All" Value="全部" />
+        <LocalizationItem Name="Postponed" Value="推迟" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.ReportsV2.ReportType">
+        <LocalizationItem Name="Label" Value="标签" />
+        <LocalizationItem Name="Standard" Value="默认" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.ObjectAccess">
+        <LocalizationItem Name="AllAccess" Value="最高权限" />
+        <LocalizationItem Name="ChangeAccess" Value="修改权限" />
+        <LocalizationItem Name="Create" Value="创建" />
+        <LocalizationItem Name="Delete" Value="删除" />
+        <LocalizationItem Name="Navigate" Value="导航" />
+        <LocalizationItem Name="NoAccess" Value="无权限" />
+        <LocalizationItem Name="Read" Value="读" />
+        <LocalizationItem Name="Write" Value="写" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.SecurityRequestOperations">
+        <LocalizationItem Name="Create" Value="创建" />
+        <LocalizationItem Name="Delete" Value="删除" />
+        <LocalizationItem Name="Read" Value="读" />
+        <LocalizationItem Name="Write" Value="写" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Templates.ActionsToolbarVisibility">
+        <LocalizationItem Name="Default" Value="默认" />
+        <LocalizationItem Name="Hide" Value="隐藏" />
+        <LocalizationItem Name="Show" Value="显示" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.AuditTrail.AuditOperationType">
+        <LocalizationItem Name="AddedToCollection" Value="已添加到集合" />
+        <LocalizationItem Name="AggregatedObjectChanged" Value="聚合对象已更改" />
+        <LocalizationItem Name="CollectionObjectChanged" Value="集合对象已更改" />
+        <LocalizationItem Name="CustomData" Value="自定义数据" />
+        <LocalizationItem Name="InitialValueAssigned" Value="初始值已分配" />
+        <LocalizationItem Name="ObjectChanged" Value="对象已更改" />
+        <LocalizationItem Name="ObjectCreated" Value="对象已创建" />
+        <LocalizationItem Name="ObjectDeleted" Value="对象已删除" />
+        <LocalizationItem Name="RemovedFromCollection" Value="已从集合中移除" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Base.SecurityPermissionPolicy">
+        <LocalizationItem Name="AllowAllByDefault" Value="默认全部允许" />
+        <LocalizationItem Name="DenyAllByDefault" Value="默认全部拒绝" />
+        <LocalizationItem Name="ReadOnlyAllByDefault" Value="默认全部只读" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Base.SecurityPermissionState">
+        <LocalizationItem Name="Allow" Value="允许" />
+        <LocalizationItem Name="Deny" Value="拒绝" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.CriteriaEvaluationBehavior">
+        <LocalizationItem Name="BeforeTransaction" Value="事务前验证" />
+        <LocalizationItem Name="InTransaction" Value="事务中验证" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.StringComparisonType">
+        <LocalizationItem Name="Contains" Value="包含" />
+        <LocalizationItem Name="EndsWith" Value="结尾是" />
+        <LocalizationItem Name="Equals" Value="等于" />
+        <LocalizationItem Name="NotEquals" Value="不等于" />
+        <LocalizationItem Name="StartsWith" Value="开头是" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValidationOutcome">
+        <LocalizationItem Name="Error" Value="错误" />
+        <LocalizationItem Name="Information" Value="信息" />
+        <LocalizationItem Name="Skipped" Value="已跳过" />
+        <LocalizationItem Name="Valid" Value="有效" />
+        <LocalizationItem Name="Warning" Value="警告" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValidationResultType">
+        <LocalizationItem Name="Error" Value="错误" />
+        <LocalizationItem Name="Information" Value="信息" />
+        <LocalizationItem Name="Warning" Value="警告" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValueComparisonType">
+        <LocalizationItem Name="Equals" Value="等于" />
+        <LocalizationItem Name="GreaterThan" Value="大于" />
+        <LocalizationItem Name="GreaterThanOrEqual" Value="大于等于" />
+        <LocalizationItem Name="LessThan" Value="小于" />
+        <LocalizationItem Name="LessThanOrEqual" Value="小于等于" />
+        <LocalizationItem Name="NotEquals" Value="不等于" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Exceptions">
+      <LocalizationItem Name="CanNotDeleteObject" Value="由于安全限制，您无法删除 '{0}' 对象." />
+      <LocalizationItem Name="CanNotSaveObject" Value="由于安全限制，您无法保存 '{0}' 对象." />
+      <LocalizationItem Name="ReportsDisplayNameIsEmptyErrorMessage" Value="您正尝试保存一个 &quot;DisplayName&quot; 属性为空或为默认值的报表.请在保存报表之前定义此属性" />
+      <LocalizationGroup Name="SystemExceptions">
+        <LocalizationItem Name="ActionMethodShouldBeNonGeneric" Value="Unable to create action for method {0} of class {1}. Action method should be non-generic." />
+      </LocalizationGroup>
     </LocalizationGroup>
   </Localization>
   <NavigationItems NavigationStyle="Accordion" />
