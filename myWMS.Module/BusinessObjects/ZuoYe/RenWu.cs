@@ -10,6 +10,7 @@ namespace myWMS.Module.BusinessObjects.ZuoYe
 {
     [DefaultClassOptions]
     [NavigationItem("作业管理")]
+    //任务对象
     public class RenWu : XPObject
     {
         public RenWu(Session session) : base(session) { }

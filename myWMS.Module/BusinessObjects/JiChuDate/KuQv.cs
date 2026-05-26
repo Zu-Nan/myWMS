@@ -11,6 +11,7 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
 {
     [DefaultClassOptions]
     [NavigationItem("基础数据")]
+    //库区管理
     public class KuQv : XPObject
     {
         public KuQv(Session session) : base(session) { }

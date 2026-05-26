@@ -13,8 +13,7 @@ namespace wms.Module.BusinessObjects.Toukei
 {
     [DefaultClassOptions]
     [NavigationItem("统计查询")]
-    [System.ComponentModel.DisplayName("系统日志")]
-
+    //系统日志
     public class Log : BaseObject
     {
         public Log(Session session) : base(session) { }

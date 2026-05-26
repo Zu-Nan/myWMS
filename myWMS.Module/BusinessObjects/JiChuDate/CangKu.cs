@@ -7,7 +7,7 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
 {
     [DefaultClassOptions]
     [NavigationItem("基础数据")]
-
+    //仓库管理
     public class CangKu : XPObject
     {
         public CangKu(Session session) : base(session) { }

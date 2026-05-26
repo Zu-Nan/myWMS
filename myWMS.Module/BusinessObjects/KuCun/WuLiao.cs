@@ -10,6 +10,7 @@ namespace myWMS.Module.BusinessObjects.KuCun
 {
     [DefaultClassOptions]
     [NavigationItem("在库管理")]
+    //物料对象
     public class  WuLiao:XPObject
     {
         public WuLiao(Session session) : base(session) { }
