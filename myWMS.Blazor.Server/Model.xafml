@@ -334,6 +334,8 @@
       <Item Id="基础数据" Index="1">
         <Items>
           <Item Id="CangKu_ListView" Caption="仓库管理" />
+          <Item Id="KuQv_ListView" Caption="库区管理" />
+          <Item Id="KuWei_ListView" Caption="库位管理" />
         </Items>
       </Item>
       <Item Id="在库管理" Index="2" />
@@ -382,6 +384,25 @@
         <PropertyEditor Id="UserName" Caption="用户名" />
       </Items>
     </DetailView>
+    <DetailView Id="CangKu_DetailView" Caption="仓库管理">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="CangKu" RelativeSize="17.258064516129032" Caption="仓库">
+              <LayoutItem Id="CangKuName" RelativeSize="29.906542056074766" />
+              <LayoutItem Id="CangKuNum" RelativeSize="22.429906542056074" />
+              <LayoutItem Id="Time" RelativeSize="22.429906542056074" />
+              <LayoutItem Id="BeiZhu" RelativeSize="25.233644859813083" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="82.74193548387096">
+              <LayoutItem Id="Oid" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="KuQvs_Group" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CangKu_ListView" Caption="仓库管理" />
     <DetailView Id="DashboardData_DetailView" Caption="仪表盘数据" />
     <ListView Id="DashboardData_ListView" Caption="仪表盘">
       <Columns>
@@ -415,6 +436,28 @@
         <ColumnInfo Id="Color" Caption="颜色" />
       </Columns>
     </ListView>
+    <DetailView Id="KuQv_DetailView" Caption="库区管理">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KuQv" Caption="库区" />
+          </LayoutGroup>
+          <LayoutGroup Id="KuWeis_Group" Caption="库位" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="KuQv_KuWeis_ListView" Caption="库位" />
+    <ListView Id="KuQv_ListView" Caption="仓库管理" />
+    <DetailView Id="KuWei_DetailView" Caption="库位管理">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KuWei" Caption="库位" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="KuWei_ListView" Caption="库位管理" />
     <DetailView Id="NewReportWizardParameters_DetailView" Caption="新建报表向导参数">
       <Items>
         <PropertyEditor Id="DataType" Caption="数据类型" />
