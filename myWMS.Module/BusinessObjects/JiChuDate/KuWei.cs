@@ -11,17 +11,34 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
 {
     [DefaultClassOptions]
     [NavigationItem("基础数据")]
+    //库位管理
     public class KuWei : XPObject
     {
         public KuWei(Session session) : base(session) { }
 
         [Association("KuQv-KuWeis")]
         [DisplayName("所属库区")]
-        public KuQv KuWeis
+        public KuQv KuQv
         {
-            get => GetPropertyValue<KuQv>(nameof(KuWeis));
-            set => SetPropertyValue(nameof(KuWeis), value);
+            get => GetPropertyValue<KuQv>(nameof(KuQv));
+            set => SetPropertyValue(nameof(KuQv), value);
         }
+
+        [PersistentAlias("Concat(KuQv.CangKu.CangKuNum,'-',KuQv.XiangDaoNum,'-',Lie,'-',Pai,'-',Ceng)")]
+        [DisplayName("库位编号")]
+        public string KuWeiNum => EvaluateAlias(nameof(KuWeiNum))?.ToString();
+
+        [PersistentAlias("Concat(KuQv.CangKu.CangKuNum,'仓库-',KuQv.XiangDaoNum,'巷道-',Lie,'列-',Pai,'排-',Ceng,'层')")]
+        [DisplayName("库位说明")]
+        public string KuWeiShuoMing => EvaluateAlias(nameof(KuWeiShuoMing))?.ToString();
+
+        [PersistentAlias("KuQv.KuQvNum")]
+        [DisplayName("库区编号")]
+        public string KuQvNum => EvaluateAlias(nameof(KuQvNum))?.ToString();
+
+        [PersistentAlias("KuQv.XiangDaoNum")]
+        [DisplayName("巷道编号")]
+        public string XiangDaoNum => EvaluateAlias(nameof(XiangDaoNum))?.ToString();
 
         private string _lie;
         [DisplayName("列号")]
@@ -83,7 +100,10 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
         protected override void OnSaving()
         {
             base.OnSaving();
-            Time = DateTime.Now;
+            if (Session.IsNewObject(this))
+            {
+                Time = DateTime.Now;
+            }
         }
     }
 }

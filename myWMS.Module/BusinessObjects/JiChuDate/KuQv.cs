@@ -39,12 +39,20 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
             set => SetPropertyValue(nameof(KuQvNum), ref _kuqvNum, value);
         }
 
-        private int _lieNum;
-        [DisplayName("列数量")]
-        public int LieNum
+        private string _xiangdaoNum;
+        [DisplayName("巷道编号")]
+        public string XiangDaoNum
         {
-            get => _lieNum;
-            set => SetPropertyValue(nameof(LieNum), ref _lieNum, value);
+            get => _xiangdaoNum;
+            set => SetPropertyValue(nameof(XiangDaoNum), ref _xiangdaoNum, value);
+        }
+
+        private int _lieCount;
+        [DisplayName("列数量")]
+        public int LieCount
+        {
+            get => _lieCount;
+            set => SetPropertyValue(nameof(LieCount), ref _lieCount, value);
         }
 
         private int _qishiLie;
@@ -55,12 +63,12 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
             set => SetPropertyValue(nameof(QishiLie), ref _qishiLie, value);
         }
 
-        private int _paiNum;
+        private int _paiCount;
         [DisplayName("排数量")]
-        public int PaiNum
+        public int PaiCount
         {
-            get => _paiNum;
-            set => SetPropertyValue(nameof(PaiNum), ref _paiNum, value);
+            get => _paiCount;
+            set => SetPropertyValue(nameof(PaiCount), ref _paiCount, value);
         }
 
         private int _qishiPai;
@@ -71,12 +79,12 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
             set => SetPropertyValue(nameof(QishiPai), ref _qishiPai, value);
         }
 
-        private int _cengNum;
+        private int _cengCount;
         [DisplayName("层数量")]
-        public int CengNum
+        public int CengCount
         {
-            get => _cengNum;
-            set => SetPropertyValue(nameof(CengNum), ref _cengNum, value);
+            get => _cengCount;
+            set => SetPropertyValue(nameof(CengCount), ref _cengCount, value);
         }
 
         private int _qishiCeng;
@@ -94,6 +102,23 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
             get => _zidongKuQv;
             set => SetPropertyValue(nameof(ZidongKuQv), ref _zidongKuQv, value);
         }
+
+        private string _chuKou;
+        [DisplayName("出库站台")]
+        public string ChuKou
+        {
+            get => _chuKou;
+            set => SetPropertyValue(nameof(ChuKou), ref _chuKou, value);
+        }
+
+        private string _ruKou;
+        [DisplayName("入库站台")]
+        public string RuKou
+        {
+            get => _ruKou;
+            set => SetPropertyValue(nameof(RuKou), ref _ruKou, value);
+        }
+
 
         private DateTime _time;
         [DisplayName("创建日期")]
@@ -123,10 +148,20 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
         [Association("KuQv-KuWeis")]
         public XPCollection<KuWei> KuWeis => GetCollection<KuWei>(nameof(KuWeis));
 
+        [PersistentAlias("[KuWeis][].Count()")]
+        [DisplayName("库位数量")]
+        public int KuWeiCount => (int)EvaluateAlias(nameof(KuWeiCount));
+
+        [PersistentAlias("[KuWeis][IsEmpty=True And QiYong=True].Count()")]
+        [DisplayName("可用库位")]
+        public int KeYongKuWeiCount => (int)EvaluateAlias(nameof(KeYongKuWeiCount));
         protected override void OnSaving()
         {
             base.OnSaving();
-            Time = DateTime.Now;
+            if (Session.IsNewObject(this))
+            {
+                Time = DateTime.Now;
+            }
         }
     }
 }

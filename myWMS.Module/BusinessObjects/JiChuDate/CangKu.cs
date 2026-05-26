@@ -50,10 +50,21 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
         [Association("CangKu-KuQvs")]
         public XPCollection<KuQv> KuQvs=>GetCollection<KuQv>(nameof(KuQvs));
 
+        [PersistentAlias("KuQvs.Sum(KuWeiCount)")]
+        [DisplayName("库位总数")]
+        public int KuWeiCount => Convert.ToInt32(EvaluateAlias(nameof(KuWeiCount)));
+
+        [PersistentAlias("KuQvs.Sum(KeYongKuWeiCount)")]
+        [DisplayName("可用库位总数")]
+        public int KeYongKuWeiCount => Convert.ToInt32(EvaluateAlias(nameof(KeYongKuWeiCount)));
+
         protected override void OnSaving()
         {
             base.OnSaving();
-            Time = DateTime.Now;
+            if (Session.IsNewObject(this))
+            {
+                Time = DateTime.Now;
+            }
         }
     }
 }
