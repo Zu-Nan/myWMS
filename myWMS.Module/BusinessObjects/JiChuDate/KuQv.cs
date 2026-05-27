@@ -146,6 +146,7 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
             set => SetPropertyValue(nameof(BeiZhu), ref _beizhu, value);
         }
 
+        //库区一对多库位
         [Association("KuQv-KuWeis")]
         public XPCollection<KuWei> KuWeis => GetCollection<KuWei>(nameof(KuWeis));
 

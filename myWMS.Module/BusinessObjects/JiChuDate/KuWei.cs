@@ -1,6 +1,8 @@
-﻿using DevExpress.ExpressApp.Model;
+﻿using DevExpress.ExpressApp.DC;
+using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Base;
 using DevExpress.Xpo;
+using myWMS.Module.BusinessObjects.KuCun;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,7 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
 {
     [DefaultClassOptions]
     [NavigationItem("基础数据")]
+    [XafDefaultProperty(nameof(KuWeiNum))]
     //库位管理
     public class KuWei : XPObject
     {
@@ -96,6 +99,9 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
             get => _time;
             set => SetPropertyValue(nameof(Time), ref _time, value);
         }
+
+        // [Association("KuWei-WuLiaos")]
+        // public XPCollection<WuLiao> WuLiaos => GetCollection<WuLiao>(nameof(WuLiaos));
 
         protected override void OnSaving()
         {
