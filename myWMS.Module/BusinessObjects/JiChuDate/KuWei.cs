@@ -100,9 +100,6 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
             set => SetPropertyValue(nameof(Time), ref _time, value);
         }
 
-        // [Association("KuWei-WuLiaos")]
-        // public XPCollection<WuLiao> WuLiaos => GetCollection<WuLiao>(nameof(WuLiaos));
-
         protected override void OnSaving()
         {
             base.OnSaving();

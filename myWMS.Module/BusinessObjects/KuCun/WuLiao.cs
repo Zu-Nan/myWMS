@@ -117,13 +117,12 @@ namespace myWMS.Module.BusinessObjects.KuCun
         [DisplayName("层号")]
         public string Ceng => EvaluateAlias(nameof(Ceng))?.ToString();
 
-        protected override void OnSaving()
+        private bool _zhixingChuku;
+        [DisplayName("执行出库")]
+        public bool ZhixingChuku
         {
-            base.OnSaving();
-            if (Session.IsNewObject(this))
-            {
-                Time = DateTime.Now;
-            }
+            get => _zhixingChuku;
+            set => SetPropertyValue(nameof(ZhixingChuku), ref _zhixingChuku, value);
         }
     }
 }

@@ -45,7 +45,7 @@ public enum RenWuZhuangTai
 }
 
 //任务类型
-public enum RenWuLeixing
+public enum RenWuLeiXing
 {
     [XafDisplayName("入库任务")]
     RuKuRenWu = 0,
