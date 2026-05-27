@@ -388,12 +388,7 @@
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="100">
-            <LayoutGroup Id="CangKu" RelativeSize="17.258064516129032" Caption="仓库">
-              <LayoutItem Id="CangKuName" RelativeSize="29.906542056074766" />
-              <LayoutItem Id="CangKuNum" RelativeSize="22.429906542056074" />
-              <LayoutItem Id="Time" RelativeSize="22.429906542056074" />
-              <LayoutItem Id="BeiZhu" RelativeSize="25.233644859813083" />
-            </LayoutGroup>
+            <LayoutGroup Id="CangKu" RelativeSize="17.258064516129032" Caption="仓库" />
             <LayoutGroup Id="XPObject" RelativeSize="82.74193548387096">
               <LayoutItem Id="Oid" RelativeSize="100" />
             </LayoutGroup>
@@ -402,7 +397,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="CangKu_ListView" Caption="仓库管理" />
+    <ListView Id="CangKu_ListView" Caption="仓库管理" ShowAutoFilterRow="True" />
     <DetailView Id="DashboardData_DetailView" Caption="仪表盘数据" />
     <ListView Id="DashboardData_ListView" Caption="仪表盘">
       <Columns>
@@ -447,7 +442,7 @@
       </Layout>
     </DetailView>
     <ListView Id="KuQv_KuWeis_ListView" Caption="库位" />
-    <ListView Id="KuQv_ListView" Caption="仓库管理" />
+    <ListView Id="KuQv_ListView" Caption="仓库管理" ShowAutoFilterRow="True" />
     <DetailView Id="KuWei_DetailView" Caption="库位管理">
       <Layout>
         <LayoutGroup Id="Main">
@@ -457,7 +452,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="KuWei_ListView" Caption="库位管理" />
+    <ListView Id="KuWei_ListView" Caption="库位管理" ShowAutoFilterRow="True" />
     <DetailView Id="NewReportWizardParameters_DetailView" Caption="新建报表向导参数">
       <Items>
         <PropertyEditor Id="DataType" Caption="数据类型" />
@@ -614,6 +609,38 @@
         <ColumnInfo Id="Color" Caption="颜色" />
       </Columns>
     </ListView>
+    <DetailView Id="WuLiao_DetailView" Caption="物料库存">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="WuLiao" RelativeSize="35" Caption="物料库存">
+              <LayoutGroup Id="WuLiao_col1" RelativeSize="49.936143039591315">
+                <LayoutItem Id="CunChuZhuangTai" RelativeSize="17.391304347826086" />
+                <LayoutItem Id="BaoHao" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="KuWei" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="WuLiaoName" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="MaKouName" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="KuCunCount" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="BeiZhu" RelativeSize="17.391304347826086" />
+              </LayoutGroup>
+              <LayoutGroup Id="WuLiao_col2" RelativeSize="50.063856960408685">
+                <LayoutItem Id="Time" RelativeSize="17.391304347826086" />
+                <LayoutItem Id="RuKuTime" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="ChuKuTime" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="XiangDaoNum" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="Lie" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="Pai" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="Ceng" RelativeSize="17.391304347826086" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="65">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="WuLiao_ListView" ShowAutoFilterRow="True" />
     <ListView Id="XpoState_Appearance_ListView" Caption="外观">
       <Columns>
         <ColumnInfo Id="AppearanceItemType" Caption="外观项目类型" />

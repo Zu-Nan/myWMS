@@ -17,9 +17,9 @@ namespace myWMS.Module.BusinessObjects.KuCun
     {
         public WuLiao(Session session) : base(session) { }
 
-        private string _cunChuZhuangTai;
+        private CunChuZhuangTai _cunChuZhuangTai;
         [DisplayName("存储状态")]
-        public string CunChuZhuangTai
+        public CunChuZhuangTai CunChuZhuangTai
         {
             get => _cunChuZhuangTai; 
             set =>SetPropertyValue(nameof(CunChuZhuangTai), ref _cunChuZhuangTai, value); 
@@ -57,9 +57,9 @@ namespace myWMS.Module.BusinessObjects.KuCun
             set =>SetPropertyValue(nameof(MaKouName), ref _maKouName, value);
         }
 
-        private string _kuCunCount;
+        private int _kuCunCount;
         [DisplayName("库存数量")]
-        public string KuCunCount
+        public int KuCunCount
         {
             get => _kuCunCount;
             set =>SetPropertyValue(nameof(KuCunCount), ref _kuCunCount, value);
