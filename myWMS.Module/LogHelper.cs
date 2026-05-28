@@ -1,7 +1,7 @@
 ﻿using DevExpress.ExpressApp;
 using DevExpress.Xpo;
 using DevExpress.XtraPrinting.Native;
-using wms.Module.BusinessObjects.Toukei;
+using wms.Module.BusinessObjects.TongJi;
 
 public static class LogHelper
 {
