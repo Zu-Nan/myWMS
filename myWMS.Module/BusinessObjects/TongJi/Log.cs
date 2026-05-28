@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DevExpress.ExpressApp.Model;
 
-namespace wms.Module.BusinessObjects.Toukei
+namespace wms.Module.BusinessObjects.TongJi
 {
     [DefaultClassOptions]
     [NavigationItem("统计查询")]

@@ -16,12 +16,12 @@ namespace myWMS.Module.BusinessObjects.ZuoYe
     {
         public RenWu(Session session) : base(session) { }
 
-        private string _Baohao;
+        private string _baoHao;
         [DisplayName("系统包号")]
-        public string Baohao
+        public string BaoHao
         {
-            get => _Baohao;
-            set => SetPropertyValue(nameof(Baohao), ref _Baohao, value);
+            get => _baoHao;
+            set => SetPropertyValue(nameof(BaoHao), ref _baoHao, value);
         }
 
         private KuWei _kuWei;
