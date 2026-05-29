@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Base;
 using DevExpress.Xpo;
 
@@ -49,6 +50,7 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
 
         private DateTime _time;
         [DisplayName("更新时间")]
+        [ModelDefault("DisplayFormat", "{0:yyyy/MM/dd HH:mm:ss}")]
         public DateTime Time
         {
             get => _time;

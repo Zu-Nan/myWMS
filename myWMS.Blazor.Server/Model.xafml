@@ -333,9 +333,11 @@
       </Item>
       <Item Id="基础数据" Index="1">
         <Items>
-          <Item Id="CangKu_ListView" Caption="仓库管理" />
-          <Item Id="KuQv_ListView" Caption="库区管理" />
-          <Item Id="KuWei_ListView" Caption="库位管理" />
+          <Item Id="CangKu_ListView" Caption="仓库管理" Index="0" />
+          <Item Id="KuQv_ListView" Caption="库区管理" Index="1" />
+          <Item Id="KuWei_ListView" Caption="库位管理" Index="2" />
+          <Item Id="RuKou_ListView" Caption="入口管理" Index="3" />
+          <Item Id="ChuKou_ListView" Caption="出口管理" Index="4" />
         </Items>
       </Item>
       <Item Id="在库管理" Index="2" />
@@ -398,6 +400,16 @@
       </Layout>
     </DetailView>
     <ListView Id="CangKu_ListView" Caption="仓库管理" ShowAutoFilterRow="True" />
+    <DetailView Id="ChuKou_DetailView" Caption="出口管理">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChuKou" Caption="出口管理" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ChuKou_ListView" Caption="出口管理" />
     <DetailView Id="DashboardData_DetailView" Caption="仪表盘数据" />
     <ListView Id="DashboardData_ListView" Caption="仪表盘">
       <Columns>
@@ -609,6 +621,16 @@
         <ColumnInfo Id="Color" Caption="颜色" />
       </Columns>
     </ListView>
+    <DetailView Id="RuKou_DetailView" Caption="入口管理">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="RuKou" Caption="入口管理" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuKou_ListView" Caption="入口管理" />
     <DetailView Id="WuLiao_DetailView" Caption="物料库存">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
@@ -624,7 +646,6 @@
                 <LayoutItem Id="BeiZhu" RelativeSize="17.391304347826086" />
               </LayoutGroup>
               <LayoutGroup Id="WuLiao_col2" RelativeSize="50.063856960408685">
-                <LayoutItem Id="Time" RelativeSize="17.391304347826086" />
                 <LayoutItem Id="RuKuTime" RelativeSize="13.043478260869565" />
                 <LayoutItem Id="ChuKuTime" RelativeSize="13.043478260869565" />
                 <LayoutItem Id="XiangDaoNum" RelativeSize="13.043478260869565" />

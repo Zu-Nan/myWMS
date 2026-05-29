@@ -1,4 +1,5 @@
-﻿using DevExpress.Persistent.Base;
+﻿using DevExpress.ExpressApp.Model;
+using DevExpress.Persistent.Base;
 using DevExpress.Xpo;
 using Microsoft.Identity.Client;
 using System;
@@ -123,6 +124,7 @@ namespace myWMS.Module.BusinessObjects.JiChuDate
 
         private DateTime _time;
         [DisplayName("创建日期")]
+        [ModelDefault("DisplayFormat", "{0:yyyy/MM/dd}")]
         public DateTime Time
         {
             get => _time;
