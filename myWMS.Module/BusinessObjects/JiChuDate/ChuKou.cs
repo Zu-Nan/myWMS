@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevExpress.Persistent.Base;
 using DevExpress.Xpo;
 
 namespace myWMS.Module.BusinessObjects.JiChuDate
 {
+    [DefaultClassOptions]
+    [NavigationItem("基础数据")]
     //出口对象
     public class ChuKou : XPObject
     {
