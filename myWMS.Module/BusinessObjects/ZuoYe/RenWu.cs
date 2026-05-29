@@ -48,6 +48,22 @@ namespace myWMS.Module.BusinessObjects.ZuoYe
             set => SetPropertyValue(nameof(RenWuLeiXing), ref _renWuLeiXing, value);
         }
 
+        private string _ruKouName;
+        [DisplayName("入口名称")]
+        public string RuKouName
+        {
+            get => _ruKouName;
+            set => SetPropertyValue(nameof(RuKouName), ref _ruKouName, value);
+        }
+
+        private string _chuKouName;
+        [DisplayName("出口名称")]
+        public string ChuKouName
+        {
+            get => _chuKouName;
+            set => SetPropertyValue(nameof(ChuKouName), ref _chuKouName, value);
+        }
+
         private bool _isDaoKu;
         [DisplayName("是否倒库")]
         public bool IsDaoKu
@@ -55,10 +71,6 @@ namespace myWMS.Module.BusinessObjects.ZuoYe
             get => _isDaoKu;
             set => SetPropertyValue(nameof(IsDaoKu), ref _isDaoKu, value);
         }
-
-        // [PersistentAlias("KuWei.XiangDaoNum")]
-        // [DisplayName("巷道编号")]
-        // public string XiangDaoNum => EvaluateAlias(nameof(XiangDaoNum))?.ToString();
 
         private string _daoKuBaohao;
         [DisplayName("倒库包号")]

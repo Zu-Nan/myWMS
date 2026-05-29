@@ -57,6 +57,14 @@ namespace myWMS.Module.BusinessObjects.KuCun
             set =>SetPropertyValue(nameof(MaKouName), ref _maKouName, value);
         }
 
+        private string _chuKouName;
+        [DisplayName("出口名称")]
+        public string ChuKouName
+        {
+            get => _chuKouName;
+            set =>SetPropertyValue(nameof(ChuKouName), ref _chuKouName, value);
+        }
+
         private int _kuCunCount;
         [DisplayName("库存数量")]
         public int KuCunCount
