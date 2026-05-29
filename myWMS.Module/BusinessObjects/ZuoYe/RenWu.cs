@@ -56,9 +56,9 @@ namespace myWMS.Module.BusinessObjects.ZuoYe
             set => SetPropertyValue(nameof(IsDaoKu), ref _isDaoKu, value);
         }
 
-        [PersistentAlias("KuWei.XiangDaoNum")]
-        [DisplayName("巷道编号")]
-        public string XiangDaoNum => EvaluateAlias(nameof(XiangDaoNum))?.ToString();
+        // [PersistentAlias("KuWei.XiangDaoNum")]
+        // [DisplayName("巷道编号")]
+        // public string XiangDaoNum => EvaluateAlias(nameof(XiangDaoNum))?.ToString();
 
         private string _daoKuBaohao;
         [DisplayName("倒库包号")]

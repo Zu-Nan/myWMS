@@ -340,9 +340,23 @@
           <Item Id="ChuKou_ListView" Caption="出口管理" Index="4" />
         </Items>
       </Item>
-      <Item Id="在库管理" Index="2" />
-      <Item Id="作业管理" Index="3" />
-      <Item Id="Reports" Caption="报表" Index="97">
+      <Item Id="在库管理" Index="2">
+        <Items>
+          <Item Id="WuLiao_ListView_DaiRu" ViewId="WuLiao_ListView_DaiRu" ObjectKey="" Index="0" IsNewNode="True" />
+          <Item Id="WuLiao_ListView_ZaiKu" ViewId="WuLiao_ListView_ZaiKu" ObjectKey="" Index="1" IsNewNode="True" />
+          <Item Id="WuLiao_ListView_DaiChu" ViewId="WuLiao_ListView_DaiChu" ObjectKey="" Index="2" IsNewNode="True" />
+          <Item Id="WuLiao_ListView_YiChu" ViewId="WuLiao_ListView_YiChu" ObjectKey="" Index="3" IsNewNode="True" />
+          <Item Id="WuLiao_ListView" Index="4" />
+        </Items>
+      </Item>
+      <Item Id="作业管理" Index="3">
+        <Items>
+          <Item Id="RenWu_ListView_DengDaiZhiXing" ViewId="RenWu_ListView_DengDaiZhiXing" ObjectKey="" Index="0" IsNewNode="True" />
+          <Item Id="RenWu_ListView_ZhengZaiZhiXing" ViewId="RenWu_ListView_ZhengZaiZhiXing" ObjectKey="" Index="1" IsNewNode="True" />
+          <Item Id="RenWu_ListView" Index="2" />
+        </Items>
+      </Item>
+      <Item Id="Reports" Caption="报表" Index="97" Visible="False">
         <Items>
           <Item Id="Dashboards" Caption="仪表盘" />
           <Item Id="ReportsV2" Caption="报表" />
@@ -465,6 +479,20 @@
       </Layout>
     </DetailView>
     <ListView Id="KuWei_ListView" Caption="库位管理" ShowAutoFilterRow="True" />
+    <DetailView Id="Log_DetailView" Caption="系统日志">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Log" Caption="系统日志" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Log_ListView" Caption="系统日志">
+      <Columns>
+        <ColumnInfo Id="Message" Index="3" />
+      </Columns>
+    </ListView>
     <DetailView Id="NewReportWizardParameters_DetailView" Caption="新建报表向导参数">
       <Items>
         <PropertyEditor Id="DataType" Caption="数据类型" />
@@ -588,6 +616,72 @@
         <ColumnInfo Id="CanEditModel" Caption="允许编辑模型" />
       </Columns>
     </ListView>
+    <DetailView Id="RenWu_DetailView" Caption="控制作业">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="RenWu" Caption="控制作业" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RenWu_ListView" ShowAutoFilterRow="True" Caption="历史控制作业">
+      <Columns>
+        <ColumnInfo Id="BeiZhu" Index="-1" />
+        <ColumnInfo Id="ChuangJianShiJian" Index="-1" />
+        <ColumnInfo Id="DaoKuBaohao" Index="-1" />
+        <ColumnInfo Id="DaoKuMuDiHuoWei" Index="-1" />
+        <ColumnInfo Id="DaoKuQiShiHuoWei" Index="-1" />
+        <ColumnInfo Id="JiHuaShiJian" Index="-1" />
+        <ColumnInfo Id="WanChengShiJian" Index="-1" />
+        <ColumnInfo Id="Oid" Index="0" />
+        <ColumnInfo Id="BaoHao" Index="1" />
+        <ColumnInfo Id="KuWei" Index="2" />
+        <ColumnInfo Id="RenWuLeiXing" SortOrder="Ascending" GroupIndex="0" Index="3" />
+        <ColumnInfo Id="RenWuZhuangTai" Index="4" />
+        <ColumnInfo Id="IsDaoKu" Index="5" />
+        <ColumnInfo Id="FaSongShiJian" Index="7" />
+        <ColumnInfo Id="ZhiXingShiJian" Index="8" />
+      </Columns>
+    </ListView>
+    <ListView Id="RenWu_ListView_DengDaiZhiXing" ClassName="myWMS.Module.BusinessObjects.ZuoYe.RenWu" ShowAutoFilterRow="True" Caption="等待执行的作业" Criteria="[RenWuZhuangTai] = ##Enum#RenWuZhuangTai,DengDaiFaSong# Or [RenWuZhuangTai] = ##Enum#RenWuZhuangTai,DengDaiZhiXing#" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="BeiZhu" PropertyName="BeiZhu" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ChuangJianShiJian" PropertyName="ChuangJianShiJian" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DaoKuBaohao" PropertyName="DaoKuBaohao" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DaoKuMuDiHuoWei" PropertyName="DaoKuMuDiHuoWei" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DaoKuQiShiHuoWei" PropertyName="DaoKuQiShiHuoWei" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="JiHuaShiJian" PropertyName="JiHuaShiJian" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="WanChengShiJian" PropertyName="WanChengShiJian" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="BaoHao" PropertyName="BaoHao" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="KuWei" PropertyName="KuWei" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="RenWuLeiXing" PropertyName="RenWuLeiXing" SortOrder="Ascending" GroupIndex="0" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="RenWuZhuangTai" PropertyName="RenWuZhuangTai" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="IsDaoKu" PropertyName="IsDaoKu" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="FaSongShiJian" PropertyName="FaSongShiJian" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="ZhiXingShiJian" PropertyName="ZhiXingShiJian" Index="8" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="RenWu_ListView_ZhengZaiZhiXing" ClassName="myWMS.Module.BusinessObjects.ZuoYe.RenWu" ShowAutoFilterRow="True" Caption="正在执行的作业" Criteria="[RenWuZhuangTai] = ##Enum#RenWuZhuangTai,ZhengZaiZhiXing#" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="BeiZhu" PropertyName="BeiZhu" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ChuangJianShiJian" PropertyName="ChuangJianShiJian" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DaoKuBaohao" PropertyName="DaoKuBaohao" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DaoKuMuDiHuoWei" PropertyName="DaoKuMuDiHuoWei" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DaoKuQiShiHuoWei" PropertyName="DaoKuQiShiHuoWei" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="JiHuaShiJian" PropertyName="JiHuaShiJian" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="WanChengShiJian" PropertyName="WanChengShiJian" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="BaoHao" PropertyName="BaoHao" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="KuWei" PropertyName="KuWei" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="RenWuLeiXing" PropertyName="RenWuLeiXing" SortOrder="Ascending" GroupIndex="0" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="RenWuZhuangTai" PropertyName="RenWuZhuangTai" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="IsDaoKu" PropertyName="IsDaoKu" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="FaSongShiJian" PropertyName="FaSongShiJian" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="ZhiXingShiJian" PropertyName="ZhiXingShiJian" Index="8" IsNewNode="True" />
+      </Columns>
+    </ListView>
     <DetailView Id="ReportDataV2_DetailView" Caption="报表">
       <Items>
         <PropertyEditor Id="DataTypeCaption" Caption="数据类型" />
@@ -661,7 +755,103 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="WuLiao_ListView" ShowAutoFilterRow="True" />
+    <ListView Id="WuLiao_ListView" ShowAutoFilterRow="True" Caption="库存账本">
+      <Columns>
+        <ColumnInfo Id="BeiZhu" Index="-1" />
+        <ColumnInfo Id="ChuKuTime" Index="-1" />
+        <ColumnInfo Id="KuCunCount" Index="-1" />
+        <ColumnInfo Id="MaKouName" Index="-1" />
+        <ColumnInfo Id="Time" Index="-1" />
+        <ColumnInfo Id="ZhixingChuku" Index="-1" />
+        <ColumnInfo Id="CunChuZhuangTai" Index="0" />
+        <ColumnInfo Id="WuLiaoName" Index="1" />
+        <ColumnInfo Id="XiangDaoNum" Index="4" />
+        <ColumnInfo Id="Lie" Index="5" />
+        <ColumnInfo Id="Pai" Index="6" />
+        <ColumnInfo Id="Ceng" Index="7" />
+        <ColumnInfo Id="RuKuTime" Index="8" />
+      </Columns>
+    </ListView>
+    <ListView Id="WuLiao_ListView_DaiChu" ClassName="myWMS.Module.BusinessObjects.KuCun.WuLiao" ShowAutoFilterRow="True" Caption="待出物资" Criteria="[CunChuZhuangTai] = ##Enum#CunChuZhuangTai,DengDaiChuKu# Or [CunChuZhuangTai] = ##Enum#CunChuZhuangTai,ZhengZaiChuKu#" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="BeiZhu" PropertyName="BeiZhu" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ChuKuTime" PropertyName="ChuKuTime" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="KuCunCount" PropertyName="KuCunCount" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="MaKouName" PropertyName="MaKouName" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Time" PropertyName="Time" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ZhixingChuku" PropertyName="ZhixingChuku" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="CunChuZhuangTai" PropertyName="CunChuZhuangTai" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="WuLiaoName" PropertyName="WuLiaoName" SortIndex="0" SortOrder="Ascending" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="BaoHao" PropertyName="BaoHao" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="KuWei" PropertyName="KuWei" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="XiangDaoNum" PropertyName="XiangDaoNum" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="Lie" PropertyName="Lie" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Pai" PropertyName="Pai" Index="6" IsNewNode="True" />
+        <ColumnInfo Id="Ceng" PropertyName="Ceng" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="RuKuTime" PropertyName="RuKuTime" Index="8" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="WuLiao_ListView_DaiRu" ClassName="myWMS.Module.BusinessObjects.KuCun.WuLiao" ShowAutoFilterRow="True" Caption="待入物资" Criteria="[CunChuZhuangTai] = ##Enum#CunChuZhuangTai,DengDaiRuKu# Or [CunChuZhuangTai] = ##Enum#CunChuZhuangTai,ZhengZaiRuKu#" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="BeiZhu" PropertyName="BeiZhu" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ChuKuTime" PropertyName="ChuKuTime" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="KuCunCount" PropertyName="KuCunCount" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="MaKouName" PropertyName="MaKouName" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Time" PropertyName="Time" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ZhixingChuku" PropertyName="ZhixingChuku" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="CunChuZhuangTai" PropertyName="CunChuZhuangTai" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="WuLiaoName" PropertyName="WuLiaoName" SortIndex="0" SortOrder="Ascending" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="BaoHao" PropertyName="BaoHao" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="KuWei" PropertyName="KuWei" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="XiangDaoNum" PropertyName="XiangDaoNum" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="Lie" PropertyName="Lie" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Pai" PropertyName="Pai" Index="6" IsNewNode="True" />
+        <ColumnInfo Id="Ceng" PropertyName="Ceng" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="RuKuTime" PropertyName="RuKuTime" Index="8" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="WuLiao_ListView_YiChu" ClassName="myWMS.Module.BusinessObjects.KuCun.WuLiao" ShowAutoFilterRow="True" Caption="已出物资" Criteria="[CunChuZhuangTai] = ##Enum#CunChuZhuangTai,ChuKuWanCheng#" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="BeiZhu" PropertyName="BeiZhu" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ChuKuTime" PropertyName="ChuKuTime" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="KuCunCount" PropertyName="KuCunCount" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="MaKouName" PropertyName="MaKouName" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Time" PropertyName="Time" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ZhixingChuku" PropertyName="ZhixingChuku" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="CunChuZhuangTai" PropertyName="CunChuZhuangTai" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="WuLiaoName" PropertyName="WuLiaoName" SortIndex="0" SortOrder="Ascending" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="BaoHao" PropertyName="BaoHao" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="KuWei" PropertyName="KuWei" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="XiangDaoNum" PropertyName="XiangDaoNum" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="Lie" PropertyName="Lie" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Pai" PropertyName="Pai" Index="6" IsNewNode="True" />
+        <ColumnInfo Id="Ceng" PropertyName="Ceng" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="RuKuTime" PropertyName="RuKuTime" Index="8" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="WuLiao_ListView_ZaiKu" ClassName="myWMS.Module.BusinessObjects.KuCun.WuLiao" ShowAutoFilterRow="True" Caption="在库物资" Criteria="[CunChuZhuangTai] = ##Enum#CunChuZhuangTai,RuKuWanCheng#" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="BeiZhu" PropertyName="BeiZhu" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ChuKuTime" PropertyName="ChuKuTime" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="KuCunCount" PropertyName="KuCunCount" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="MaKouName" PropertyName="MaKouName" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Time" PropertyName="Time" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="ZhixingChuku" PropertyName="ZhixingChuku" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="CunChuZhuangTai" PropertyName="CunChuZhuangTai" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="WuLiaoName" PropertyName="WuLiaoName" SortIndex="0" SortOrder="Ascending" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="BaoHao" PropertyName="BaoHao" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="KuWei" PropertyName="KuWei" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="XiangDaoNum" PropertyName="XiangDaoNum" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="Lie" PropertyName="Lie" Index="5" IsNewNode="True" />
+        <ColumnInfo Id="Pai" PropertyName="Pai" Index="6" IsNewNode="True" />
+        <ColumnInfo Id="Ceng" PropertyName="Ceng" Index="7" IsNewNode="True" />
+        <ColumnInfo Id="RuKuTime" PropertyName="RuKuTime" Index="8" IsNewNode="True" />
+      </Columns>
+    </ListView>
     <ListView Id="XpoState_Appearance_ListView" Caption="外观">
       <Columns>
         <ColumnInfo Id="AppearanceItemType" Caption="外观项目类型" />

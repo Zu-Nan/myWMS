@@ -50,7 +50,7 @@ namespace myWMS.Module.BusinessObjects.KuCun
         }
 
         private string _maKouName;
-        [DisplayName("码口名称")]
+        [DisplayName("入口名称")]
         public string MaKouName
         {
             get => _maKouName;

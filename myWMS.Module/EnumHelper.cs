@@ -37,7 +37,7 @@ public enum RenWuZhuangTai
     [XafDisplayName("故障中断")]
     GuZhangZhongDuan = 3,
     [XafDisplayName("任务撤销")]
-    RenWuChengXiao = 4,
+    RenWuCheXiao = 4,
     [XafDisplayName("自动完成")]
     ZiDongWanCheng = 5,
     [XafDisplayName("人工完成")]
