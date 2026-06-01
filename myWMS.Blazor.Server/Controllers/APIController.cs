@@ -1,5 +1,8 @@
 ﻿using DevExpress.ExpressApp;
 using Microsoft.AspNetCore.Mvc;
+using myWMS.Module;
+using myWMS.Module.BusinessObjects.JiChuDate;
+using myWMS.Module.BusinessObjects.KuCun;
 using myWMS.Module.BusinessObjects.ZuoYe;
 using wms.Module.BusinessObjects.TongJi;
 
@@ -90,6 +93,61 @@ namespace myWMS.Blazor.Server.Controllers
             }
         }
 
-        
+        //新建物资
+        [HttpPost("XinJianWuLiao")]
+        public IActionResult XinJianWuLiao([FromBody] WuLiaoHelper wl)
+        {
+            try
+            {
+                using var os=objectSpaceFactory.CreateObjectSpace(typeof(WuLiao));
+                using var logSpace=objectSpaceFactory.CreateObjectSpace<Log>();
+
+                //新建物资
+                WuLiao wuliaos=os.CreateObject<WuLiao>();
+                wuliaos.BaoHao=wl.BaoHao;
+                wuliaos.WuLiaoName=wl.WuLiaoName;
+                wuliaos.MaKouName=wl.MaKouName;
+                os.CommitChanges();
+
+                LogHelper.WriteMessage(logSpace,"APIController.XinJianWuLiao",$"新建物资成功,包号={wl.BaoHao},码口名称={wl.MaKouName}");
+
+                return Ok(new{success=true,message="物资已创建"});
+            }catch(Exception ex)
+            {
+                using var logSpace=objectSpaceFactory.CreateObjectSpace<Log>();
+                LogHelper.WriteError(logSpace,"APIController.XinJianWuLiao",$"执行失败：{ex.Message}",ex);
+                return BadRequest(new{success=false,message=ex.Message});
+            }
+        }
+
+        //执行入库
+        [HttpPost("ZhiXingRuKu")]
+        public IActionResult ZhiXingRuKu([FromBody] string rukouNum)
+        {
+            try
+            {
+                using var os=objectSpaceFactory.CreateObjectSpace(typeof(RuKou));
+                using var logSpace=objectSpaceFactory.CreateObjectSpace<Log>();
+
+                //查入口
+                RuKou rukou=os.GetObjectByKey<RuKou>(rukouNum);
+                if (rukou == null)
+                {
+                    return NotFound($"未找到入口{rukouNum}");
+                }
+
+                    
+
+                LogHelper.WriteMessage(logSpace,"APIController.ZhiXingRuKu",$"入库任务已执行,Oid={rukouNum},包号={rukou.BaoHao}");
+
+
+                return Ok(new{success=true,message="任务已执行"});
+            }catch(Exception ex)
+            {
+                using var logSpace=objectSpaceFactory.CreateObjectSpace<Log>();
+                LogHelper.WriteError(logSpace,"APIController.ZhiXingRuKu",$"执行失败：{ex.Message}",ex);
+                return BadRequest(new{success=false,message=ex.Message});
+            }
+        }
     }
 }

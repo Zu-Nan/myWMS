@@ -323,7 +323,7 @@
   </Localization>
   <NavigationItems NavigationStyle="Accordion">
     <Items>
-      <Item Id="Default" Caption="系统管理" Index="0">
+      <Item Id="Default" Caption="系统管理" Index="0" ImageName="ScatterChartLabelOptions">
         <Items>
           <Item Id="ApplicationUser_ListView" Caption="用户" />
           <Item Id="Event_ListView" Caption="日程安排" />
@@ -331,43 +331,47 @@
           <Item Id="PermissionPolicyRole_ListView" Caption="身份权限" />
         </Items>
       </Item>
-      <Item Id="基础数据" Index="1">
+      <Item Id="基础数据" Index="1" ImageName="BO_Category">
         <Items>
-          <Item Id="CangKu_ListView" Caption="仓库管理" Index="0" />
-          <Item Id="KuQv_ListView" Caption="库区管理" Index="1" />
-          <Item Id="KuWei_ListView" Caption="库位管理" Index="2" />
-          <Item Id="RuKou_ListView" Caption="入口管理" Index="3" />
-          <Item Id="ChuKou_ListView" Caption="出口管理" Index="4" />
+          <Item Id="CangKu_ListView" Caption="仓库管理" Index="0" ImageName="BO_Address" />
+          <Item Id="KuQv_ListView" Caption="库区管理" Index="1" ImageName="TableLayout" />
+          <Item Id="KuWei_ListView" Caption="库位管理" Index="2" ImageName="AutoSize_Fill" />
+          <Item Id="RuKou_ListView" Caption="入口管理" Index="3" ImageName="ArrangeInRows" />
+          <Item Id="ChuKou_ListView" Caption="出口管理" Index="4" ImageName="BO_Vendor" />
         </Items>
       </Item>
-      <Item Id="在库管理" Index="2">
+      <Item Id="在库管理" Index="2" ImageName="ManageDataSource">
         <Items>
-          <Item Id="WuLiao_ListView_DaiRu" ViewId="WuLiao_ListView_DaiRu" ObjectKey="" Index="0" IsNewNode="True" />
-          <Item Id="WuLiao_ListView_ZaiKu" ViewId="WuLiao_ListView_ZaiKu" ObjectKey="" Index="1" IsNewNode="True" />
-          <Item Id="WuLiao_ListView_DaiChu" ViewId="WuLiao_ListView_DaiChu" ObjectKey="" Index="2" IsNewNode="True" />
-          <Item Id="WuLiao_ListView_YiChu" ViewId="WuLiao_ListView_YiChu" ObjectKey="" Index="3" IsNewNode="True" />
-          <Item Id="WuLiao_ListView" Index="4" />
+          <Item Id="WuLiao_ListView_DaiRu" ViewId="WuLiao_ListView_DaiRu" ObjectKey="" Index="0" ImageName="NewDataSource" IsNewNode="True" />
+          <Item Id="WuLiao_ListView_ZaiKu" ViewId="WuLiao_ListView_ZaiKu" ObjectKey="" Index="1" ImageName="Actions_Database" IsNewNode="True" />
+          <Item Id="WuLiao_ListView_DaiChu" ViewId="WuLiao_ListView_DaiChu" ObjectKey="" Index="2" ImageName="EditConnection" IsNewNode="True" />
+          <Item Id="WuLiao_ListView_YiChu" ViewId="WuLiao_ListView_YiChu" ObjectKey="" Index="3" ImageName="DeleteDataSource" IsNewNode="True" />
+          <Item Id="WuLiao_ListView" Index="4" ImageName="EditDataSource" />
         </Items>
       </Item>
-      <Item Id="作业管理" Index="3">
+      <Item Id="作业管理" Index="3" ImageName="ProductSpecificationsSummary">
         <Items>
-          <Item Id="RenWu_ListView_DengDaiZhiXing" ViewId="RenWu_ListView_DengDaiZhiXing" ObjectKey="" Index="0" IsNewNode="True" />
-          <Item Id="RenWu_ListView_ZhengZaiZhiXing" ViewId="RenWu_ListView_ZhengZaiZhiXing" ObjectKey="" Index="1" IsNewNode="True" />
-          <Item Id="RenWu_ListView" Index="2" />
+          <Item Id="RenWu_ListView_DengDaiZhiXing" ViewId="RenWu_ListView_DengDaiZhiXing" ObjectKey="" Index="0" ImageName="NewTask" IsNewNode="True" />
+          <Item Id="RenWu_ListView_ZhengZaiZhiXing" ViewId="RenWu_ListView_ZhengZaiZhiXing" ObjectKey="" Index="1" ImageName="ProductSpecificationsSummary" IsNewNode="True" />
+          <Item Id="RenWu_ListView" Index="2" ImageName="CustomerProfileReport" />
         </Items>
       </Item>
-      <Item Id="Reports" Caption="报表" Index="97" Visible="False">
+      <Item Id="Reports" Caption="报表" Index="97" Visible="False" ImageName="Actions_FolderClose">
         <Items>
           <Item Id="Dashboards" Caption="仪表盘" />
           <Item Id="ReportsV2" Caption="报表" />
         </Items>
       </Item>
-      <Item Id="State Machine" Caption="状态机" Index="98">
+      <Item Id="State Machine" Caption="状态机" Index="98" ImageName="BO_StateMachine">
         <Items>
           <Item Id="XpoStateMachine_ListView" Caption="状态机" />
         </Items>
       </Item>
-      <Item Id="统计查询" Index="99" />
+      <Item Id="统计查询" Index="99" ImageName="Actions_Calendar">
+        <Items>
+          <Item Id="Log_ListView" ImageName="Actions_Calendar" />
+        </Items>
+      </Item>
     </Items>
   </NavigationItems>
   <Options UIType="TabbedMDI" RestoreTabbedMdiLayout="True" ShowTabImage="True" />
